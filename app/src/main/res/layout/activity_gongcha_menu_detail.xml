@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GongchaMenu_DetailActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="16dp">
+
+                <!-- 카드뷰1: 커스텀 메뉴 간략 정보 카드  => * 리니어로 수정  -->
+                <LinearLayout
+                    android:id="@+id/custom_concise_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical">
+
+                        <!-- 커스텀 메뉴 대표 이미지 -->
+                        <ImageView
+                            android:id="@+id/first_item_imageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            app:srcCompat="@drawable/ic_logo_all_icon_button" />
+
+                        <!-- 커스텀 메뉴 간략 정보 텍스트 그룹 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="bottom"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <!-- 커스텀 메뉴 브랜드명 텍스트 -->
+                                <TextView
+                                    android:id="@+id/first_item_brand_textView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="공차"
+                                    android:textColor="@color/Active_Text"
+                                    android:textSize="10sp" />
+
+                                <!-- 커스텀 메뉴 이름 텍스트 -->
+                                <TextView
+                                    android:id="@+id/first_item_name_textView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1위 커스텀메뉴 명칭"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/Active_Text"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                                <!-- 커스텀 메뉴 가격 텍스트 -->
+                                <TextView
+                                    android:id="@+id/first_item_prise_textView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:text="10000₩"
+                                    android:textColor="@color/Active_Text"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <!-- 커스텀 메뉴 좋아요한 인원 텍스트 -->
+                            <TextView
+                                android:id="@+id/first_item_mn_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="60dp"
+                                android:text="nn명 커스텀즈의 찜"
+                                android:textColor="@color/Maincolor_Brown2"
+                                android:textSize="15sp" />
+
+                            <!-- 커스텀 메뉴 찜 이미지 버튼 -->
+                            <ImageButton
+                                android:id="@+id/first_item_like_imageButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginLeft="10dp"
+                                android:background="#00ff0000"
+                                android:src="@drawable/ic_inactive_like_icon_24"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 커스텀 메뉴 옵션 그룹 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <!-- 커스텀 메뉴 기존 메뉴 제목 -->
+                        <TextView
+                            android:id="@+id/title_basemenu_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="기존 메뉴"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <!-- 커스텀 메뉴 기존 메뉴 표시 텍스트 -->
+                        <TextView
+                            android:id="@+id/custom_basemenu_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="기존 메뉴표시되는 텍스트"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="20sp" />
+
+                        <!-- 구분선2 이미지 -->
+                        <ImageView
+                            android:id="@+id/divid2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            app:srcCompat="@drawable/ic_divide_line" />
+
+                        <!-- 커스텀 메뉴 옵션 제목 -->
+                        <TextView
+                            android:id="@+id/title_option_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="커스텀 메뉴 옵션"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <!-- 커스텀 메뉴 사이즈 제목 -->
+                        <TextView
+                            android:id="@+id/title_size_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="사이즈"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <!-- 사이즈 라디오 버튼1~2 -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <!-- 사이즈 라디오 버튼1 -->
+                            <RadioButton
+                                android:id="@+id/custom_size1_radioButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="라지(474ml)"
+                                android:textColor="@color/Active_Text" />
+
+                            <!-- 사이즈 라디오 버튼2 -->
+                            <RadioButton
+                                android:id="@+id/custom_size2_radioButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="50dp"
+                                android:text="점보(651ml)"
+                                android:textColor="@color/Active_Text" />
+
+                        </LinearLayout>
+
+                        <!-- 커스텀 메뉴 에스프레소 샷 갯수 제목 -->
+                        <TextView
+                            android:id="@+id/title_shotnum_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="에스프레소 샷 갯수 (600원 추가)"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <!-- 커스텀 메뉴 에스프레소 샷 갯수 표시 텍스트 -->
+                        <TextView
+                            android:id="@+id/custom_shotnum_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="N 샷"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="20sp" />
+
+                        <!-- 커스텀 메뉴 당도 제목 -->
+                        <TextView
+                            android:id="@+id/title_suger_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="당도"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <!-- 커스텀 메뉴 당도 시크바 -->
+                        <SeekBar
+                            android:id="@+id/custom_suger_seekBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:progressTint="@color/Maincolor_Brown1" />
+
+                        <!-- 커스텀 메뉴 당도 시크바 값 텍스트-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="5dp">
+
+                            <!-- 당도 시크바 값 텍스트1: 0% -->
+                            <TextView
+                                android:id="@+id/explain_suger_0_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:text="0%"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/Active_Text"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <!-- 당도 시크바 값 텍스트2: 30% -->
+                            <TextView
+                                android:id="@+id/explain_suger_30_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="30%"
+                                android:textAlignment="center"
+                                android:textColor="@color/Active_Text"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <!-- 당도 시크바 값 텍스트3: 50% -->
+                            <TextView
+                                android:id="@+id/explain_suger_50_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="50%"
+                                android:textAlignment="center"
+                                android:textColor="@color/Active_Text"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <!-- 당도 시크바 값 텍스트4: 70% -->
+                            <TextView
+                                android:id="@+id/explain_suger_70_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="70%"
+                                android:textAlignment="center"
+                                android:textColor="@color/Active_Text"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <!-- 당도 시크바 값 텍스트5: 100% -->
+                            <TextView
+                                android:id="@+id/explain_suger_100_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:text="100%"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/Active_Text"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <!-- 커스텀 메뉴 얼음 제목 -->
+                        <TextView
+                            android:id="@+id/title_ice_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="얼음"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <!-- 커스텀 메뉴 얼음 시크바 -->
+                        <SeekBar
+                            android:id="@+id/custom_ice_seekBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:progressTint="@color/Maincolor_Brown1" />
+
+                        <!-- 커스텀 메뉴 얼음 시크바 값 텍스트-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <!-- 얼음 시크바 값 텍스트1: 없음 -->
+                            <TextView
+                                android:id="@+id/explain_ice_no_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:text="없음"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/Active_Text"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <!-- 얼음 시크바 값 텍스트2: 적게 -->
+                            <TextView
+                                android:id="@+id/explain_ice_less_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1"
+                                android:text="적게"
+                                android:textAlignment="center"
+                                android:textColor="@color/Active_Text"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <!-- 얼음 시크바 값 텍스트3: 보통 -->
+                            <TextView
+                                android:id="@+id/explain_ice_normal_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1"
+                                android:text="보통"
+                                android:textAlignment="center"
+                                android:textColor="@color/Active_Text"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <!-- 얼음 시크바 값 텍스트4: 많이 -->
+                            <TextView
+                                android:id="@+id/explain_ice_much_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:text="많이"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/Active_Text"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <!-- 커스텀 메뉴 토핑 제목 -->
+                        <TextView
+                            android:id="@+id/title_topping_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="토핑(최대 3가지 선택가능)"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <!-- 커스텀 메뉴 토핑 설명 -->
+                        <TextView
+                            android:id="@+id/explain_topping_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="라지 500원 | 점보 700원"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="13sp"
+                            android:textStyle="bold"/>
+
+                        <!-- 토핑 체크 박스1~3 -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <!-- 토핑 체크 박스1 -->
+                            <CheckBox
+                                android:id="@+id/custom_topping1_radioButton"
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:text="타피오카 펄"
+                                android:textColor="@color/Active_Text" />
+
+                            <!-- 토핑 체크 박스2 -->
+                            <CheckBox
+                                android:id="@+id/custom_topping2_radioButton"
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="화이트 펄"
+                                android:textColor="@color/Active_Text" />
+
+                            <!-- 토핑 체크 박스3 -->
+                            <CheckBox
+                                android:id="@+id/custom_topping3_radioButton"
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="알로에"
+                                android:textColor="@color/Active_Text" />
+
+                        </LinearLayout>
+
+                        <!-- 토핑 체크 박스4~6 -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <!-- 토핑 체크 박스4 -->
+                            <CheckBox
+                                android:id="@+id/custom_topping4_radioButton"
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:text="코코넛"
+                                android:textColor="@color/Active_Text" />
+
+                            <!-- 토핑 체크 박스5 -->
+                            <CheckBox
+                                android:id="@+id/custom_topping5_radioButton"
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="밀크폼"
+                                android:textColor="@color/Active_Text" />
+
+                            <!-- 토핑 체크 박스6 -->
+                            <CheckBox
+                                android:id="@+id/custom_topping6_radioButton"
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="치즈폼"
+                                android:textColor="@color/Active_Text" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 카드뷰2: 리뷰 작성 안내 카드 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/explain_review_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    android:elevation="15dp">
+
+                    <!-- 리뷰 작성 안내 카드 내용 그룹 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical">
+
+                        <!-- 리뷰 설명 텍스트 그룹 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical" >
+
+                            <!-- 커스텀 메뉴 리뷰 제목 텍스트 -->
+                            <TextView
+                                android:id="@+id/title_review_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="커스텀 메뉴 리뷰"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/Active_Text"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <!-- 커스텀 메뉴 리뷰 설명 텍스트 -->
+                            <TextView
+                                android:id="@+id/explain_review_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="해당 커스텀 메뉴에 대한 리뷰를 남겨주세요!"
+                                android:textColor="@color/Active_Text"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                        <!-- 리뷰 작성 버튼 그룹 -->
+                        <android.widget.Button
+                            android:id="@+id/login_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/ic_add_complete_button_background"
+                            android:backgroundTint="@color/Maincolor_Brown1"
+                            android:fontFamily="sans-serif-black"
+                            android:text="리뷰 작성하기 >"
+                            android:textColor="@color/White_Text"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- 카드뷰3: 커스텀제품 리뷰 카드-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/custom_review_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    android:elevation="15dp"
+                    android:layout_marginBottom="100dp" >
+
+                    <!-- 커스텀제품 리뷰 내용 그룹 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical">
+
+                        <!-- 커스텀 메뉴 리뷰 작성자 정보 그룹 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal" >
+
+                            <!-- 커스텀 메뉴 리뷰 작성자 프로필 이미지 -->
+                            <ImageView
+                                android:id="@+id/reviewer_profile_imageView"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                app:srcCompat="@drawable/ic_logo_all_icon_button" />
+
+                            <!-- 커스텀 메뉴 리뷰 작성자 이름 텍스트 -->
+                            <TextView
+                                android:id="@+id/reviewer_name_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="작성자이름"
+                                android:textColor="@color/Active_Text"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <!-- 커스텀 메뉴 리뷰 작성날짜 텍스트 -->
+                            <TextView
+                                android:id="@+id/review_date_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="2022.07.00"
+                                android:textColor="@color/Active_Text"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+                        <!-- 커스텀 메뉴 리뷰 내용 텍스트 -->
+                        <TextView
+                            android:id="@+id/review_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="여기에 바닐라 시럽 한번 더 추가하면 완전 최고에요!!"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="15sp" />
+
+                        <!-- 커스텀 메뉴 리뷰 이미지 -->
+                        <ImageView
+                            android:id="@+id/list_item_imageView"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+                            app:srcCompat="@drawable/ic_logo_all_icon_button" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

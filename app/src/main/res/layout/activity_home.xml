@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 상단 브랜드 버튼 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/all_tab_imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ff0000"
+                        app:srcCompat="@drawable/ic_logo_all_icon_button" />
+
+                    <ImageButton
+                        android:id="@+id/starbucks_tab_imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ff0000"
+                        app:srcCompat="@drawable/ic_logo_starbucks_icon_button" />
+
+                    <ImageButton
+                        android:id="@+id/ediya_tab_imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ff0000"
+                        app:srcCompat="@drawable/ic_logo_ediya_icon_button" />
+
+                    <ImageButton
+                        android:id="@+id/gongcha_tab_imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ff0000"
+                        app:srcCompat="@drawable/ic_logo_gongcha_icon_button" />
+
+                </LinearLayout>
+
+                <!-- 구분선 이미지 -->
+                <ImageView
+                    android:id="@+id/divide_line_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="15dp"
+                    app:srcCompat="@drawable/ic_divide_line" />
+
+            </LinearLayout>
+
+            <!-- 스크롤 뷰 -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <!-- 랭킹 리스트 쌓는 용도의 리니어 레이아웃 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- [ 카드뷰1 영역 (+그림자) ] -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/conner_round_20"
+                        android:elevation="10dp">
+
+                        <!-- 카드뷰1: 1위 커스텀 메뉴 카드 => * 리니어로 수정 -->
+                        <LinearLayout
+                            android:id="@+id/ranking_first_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginBottom="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/first_item_explain_textView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="현재 가장 인기가 많아요!"
+                                    android:textColor="@color/Maincolor_Brown3"
+                                    android:textSize="23sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/first_item_imageView"
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp"
+                                        app:srcCompat="@drawable/ic_logo_all_icon_button" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="15dp"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/first_item_name_textView"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="1위 커스텀메뉴 명칭"
+                                            android:textAlignment="viewStart"
+                                            android:textColor="@color/Active_Text"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/first_item_brand_textView"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:text="브랜드명"
+                                            android:textColor="@color/Active_Text"
+                                            android:textSize="10sp" />
+
+                                        <TextView
+                                            android:id="@+id/first_item_prise_textView"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="16dp"
+                                            android:text="10000₩"
+                                            android:textColor="@color/Active_Text"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/first_item_mn_textView"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="3dp"
+                                            android:text="nn명 커스텀즈의 찜"
+                                            android:textColor="@color/Maincolor_Brown2"
+                                            android:textSize="15sp" />
+
+
+                                    </LinearLayout>
+
+                                    <ImageButton
+                                        android:id="@+id/first_item_like_imageButton"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginLeft="70dp"
+                                        android:background="#00ff0000"
+                                        android:src="@drawable/ic_inactive_like_icon_24"
+                                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- [ 카드뷰2 영역 (+그림자) ] -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/conner_round_20"
+                        android:elevation="5dp">
+
+                        <!-- 카드뷰2: 커스텀 메뉴 리스트 카드 => * 리니어로 수정 -->
+                        <LinearLayout
+                            android:id="@+id/customlist_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginBottom="15dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/list_item_imageView"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        app:srcCompat="@drawable/ic_logo_all_icon_button" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="15dp"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/list_item_name_textView"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="커스텀메뉴 명칭"
+                                            android:textAlignment="viewStart"
+                                            android:textColor="@color/Active_Text"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/list_item_brand_textView"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="3dp"
+                                            android:text="브랜드명"
+                                            android:textColor="@color/Active_Text"
+                                            android:textSize="10sp" />
+
+                                        <TextView
+                                            android:id="@+id/list_item_prise_textView"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp"
+                                            android:text="10000₩"
+                                            android:textColor="@color/Active_Text"
+                                            android:textSize="13sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/list_item_mn_textView"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="nn명 커스텀즈의 찜"
+                                            android:textColor="@color/Maincolor_Brown2"
+                                            android:textSize="13sp" />
+
+
+                                    </LinearLayout>
+
+                                    <ImageButton
+                                        android:id="@+id/list_item_like_imageButton"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginLeft="115dp"
+                                        android:background="#00ff0000"
+                                        android:src="@drawable/ic_inactive_like_icon_20"
+                                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+
+        </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

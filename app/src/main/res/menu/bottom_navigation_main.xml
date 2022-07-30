@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_customList"
+        android:icon="@drawable/ic_active_customlist_navigation_icon_24"
+        android:enabled="true"
+        android:title="커스텀메뉴"/>
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/ic_active_home_navigation_icon_24"
+        android:enabled="true"
+        android:title="홈"/>
+    <item
+        android:id="@+id/action_myList"
+        android:icon="@drawable/ic_active_like_icon_20"
+        android:enabled="true"
+        android:title="나의찜"/>
+</menu>

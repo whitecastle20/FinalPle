@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="gongcha_menu">
+        <item>딸기쿠키스무디</item>
+        <item>망고스무디</item>
+        <item>망고요구르트</item>
+        <item>블랙밀크티</item>
+        <item>우롱밀크티</item>
+        <item>우롱티</item>
+        <item>자몽그린티에이드</item>
+        <item>제주그린티스무디</item>
+        <item>초콜릿밀크티</item>
+        <item>타로밀크티</item>
+    </string-array>
+</resources>

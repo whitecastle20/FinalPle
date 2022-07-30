@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ediya_menu">
+        <item>녹차플랫치노</item>
+        <item>딸기쉐이크</item>
+        <item>복숭아 아이스티</item>
+        <item>오리진쉐이크</item>
+        <item>초콜릿칩플랫치노</item>
+        <item>토피넛라떼</item>
+    </string-array>
+</resources>

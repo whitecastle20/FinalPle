@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GongchaMenu_writeActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="16dp">
+
+                <!-- 커스텀 메뉴 작성 그룹  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <!-- 커스텀 메뉴 브랜드 제목 -->
+                    <TextView
+                        android:id="@+id/title_brand_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="커스텀 메뉴 브랜드"
+                        android:textColor="@color/Active_Text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- 브랜드 텍스트: 공차 -->
+                    <TextView
+                        android:id="@+id/brand_name_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="공차"
+                        android:textColor="@color/Active_Text"
+                        android:textSize="20sp" />
+
+                    <!-- 커스텀 메뉴 대표 이미지 제목 -->
+                    <TextView
+                        android:id="@+id/title_image_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="커스텀 메뉴 대표 이미지"
+                        android:textColor="@color/Active_Text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- 대표 이미지 입력 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/ic_add_image_background"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <!-- 대표 이미지 입력 버튼 -->
+
+                        <ImageButton
+                            android:id="@+id/ImageRegButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#00ff0000"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/ic_add_image_icon"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <!-- 대표 이미지 설명 -->
+                        <TextView
+                            android:id="@+id/explain_image_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="커스텀 메뉴의 대표 이미지를 추가해주세요"
+                            android:textColor="@color/Inactive_Text"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- 구분선1 이미지 -->
+                    <ImageView
+                        android:id="@+id/divid1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/ic_divide_line" />
+
+                    <!-- 공개 여부 제목 -->
+                    <TextView
+                        android:id="@+id/title_publicprivate_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="공개 여부"
+                        android:textColor="@color/Active_Text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- 공개/비공개 라디오 버튼 -->
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <!-- 공개 라디오 버튼 -->
+                        <RadioButton
+                            android:id="@+id/custom_public_radioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="공개"
+                            android:textColor="@color/Active_Text" />
+
+                        <!-- 비공개 라디오 버튼 -->
+                        <RadioButton
+                            android:id="@+id/custom_private_radioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:text="비공개"
+                            android:textColor="@color/Active_Text" />
+
+                    </RadioGroup>
+
+                    <!-- 커스텀 메뉴 이름 제목 -->
+                    <TextView
+                        android:id="@+id/title_name_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="커스텀 메뉴 이름"
+                        android:textColor="@color/Active_Text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- 커스텀 메뉴 이름 입력창 -->
+                    <EditText
+                        android:id="@+id/custom_name_EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="@color/Maincolor_Brown2"
+                        android:hint="커스텀 메뉴의 이름을 입력해주세요"
+                        android:textColor="@color/Active_Text"
+                        android:textSize="15sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <!-- 커스텀 메뉴 기존 메뉴 제목 -->
+                    <TextView
+                        android:id="@+id/title_basemenu_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="기존 메뉴"
+                        android:textColor="@color/Active_Text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- 커스텀 메뉴 기존 메뉴 콤보박스(스피너) -->
+                    <Spinner
+                        android:id="@+id/custom_basemenu_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/Active_Text"
+                        android:textSize="20sp" />
+
+                    <!-- 커스텀 메뉴 가격 제목 -->
+                    <TextView
+                        android:id="@+id/title_prise_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="커스텀 메뉴 가격"
+                        android:textColor="@color/Active_Text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- 커스텀 메뉴 가격 입력 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!-- 커스텀 메뉴 가격 입력창 -->
+                        <EditText
+                            android:id="@+id/custom_prise_EditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:backgroundTint="@color/Maincolor_Brown2"
+                            android:hint="커스텀 메뉴의 가격을 입력해주세요"
+                            android:inputType="number"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="15sp" />
+
+                        <!-- 원표시 텍스트 -->
+                        <TextView
+                            android:id="@+id/explain_won_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="3dp"
+                            android:text="₩"
+                            android:textColor="@color/Maincolor_Brown2"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- 구분선2 이미지 -->
+                    <ImageView
+                        android:id="@+id/divid2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/ic_divide_line" />
+
+                    <!-- 커스텀 메뉴 옵션 제목 -->
+                    <TextView
+                        android:id="@+id/title_option_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="커스텀 메뉴 옵션"
+                        android:textColor="@color/Active_Text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- 커스텀 메뉴 사이즈 제목 -->
+                    <TextView
+                        android:id="@+id/title_size_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="사이즈"
+                        android:textColor="@color/Active_Text"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <!-- 사이즈 라디오 버튼1~2 -->
+                    <RadioGroup
+                        android:id="@+id/sizeRadioGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <!-- 사이즈 라디오 버튼1 -->
+                        <RadioButton
+                            android:id="@+id/custom_size1_radioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="라지(474ml)"
+                            android:textColor="@color/Active_Text" />
+
+                        <!-- 사이즈 라디오 버튼2 -->
+                        <RadioButton
+                            android:id="@+id/custom_size2_radioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="50dp"
+                            android:text="점보(651ml)"
+                            android:textColor="@color/Active_Text" />
+
+                    </RadioGroup>
+
+                    <!-- 커스텀 메뉴 에스프레소 샷 갯수 제목 -->
+                    <TextView
+                        android:id="@+id/title_shotnum_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="에스프레소 샷 갯수 (600원 추가)"
+                        android:textColor="@color/Active_Text"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <!-- 커스텀 메뉴 에스프레소 샷 갯수 증감 버튼 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <!-- 커스텀 메뉴 에스프레소 샷 갯수 감소 버튼 -->
+                        <android.widget.Button
+                            android:id="@+id/custom_shotnum_sub_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="-"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <!-- 커스텀 메뉴 에스프레소 샷 갯수 표시 텍스트 -->
+                        <TextView
+                            android:id="@+id/custom_shotnum_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="15dp"
+                            android:text="0"
+                            android:textColor="@color/Active_Text"
+                            android:textStyle="bold"/>
+
+                        <!-- 커스텀 메뉴 에스프레소 샷 갯수 증가 버튼 -->
+                        <android.widget.Button
+                            android:id="@+id/custom_shotnum_plus_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:text="+"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- 커스텀 메뉴 당도 제목 -->
+                    <TextView
+                        android:id="@+id/title_suger_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="당도"
+                        android:textColor="@color/Active_Text"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/sugerStatus_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="현재상태"
+                        android:textColor="@color/Active_Text"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <!-- 커스텀 메뉴 당도 시크바 -->
+
+                    <!-- 커스텀 메뉴 당도 시크바 값 텍스트-->
+                    <SeekBar
+                        android:id="@+id/custom_suger_seekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:progressTint="@color/Maincolor_Brown1" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="5dp">
+
+                        <!-- 당도 시크바 값 텍스트1: 0% -->
+                        <TextView
+                            android:id="@+id/explain_suger_0_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="0%"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <!-- 당도 시크바 값 텍스트2: 30% -->
+                        <TextView
+                            android:id="@+id/explain_suger_30_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="30%"
+                            android:textAlignment="center"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <!-- 당도 시크바 값 텍스트3: 50% -->
+                        <TextView
+                            android:id="@+id/explain_suger_50_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="50%"
+                            android:textAlignment="center"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <!-- 당도 시크바 값 텍스트4: 70% -->
+                        <TextView
+                            android:id="@+id/explain_suger_70_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="70%"
+                            android:textAlignment="center"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <!-- 당도 시크바 값 텍스트5: 100% -->
+                        <TextView
+                            android:id="@+id/explain_suger_100_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:text="100%"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- 커스텀 메뉴 얼음 제목 -->
+                    <TextView
+                        android:id="@+id/title_ice_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="얼음"
+                        android:textColor="@color/Active_Text"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/iceStatus_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="현재상태"
+                        android:textColor="@color/Active_Text"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <!-- 커스텀 메뉴 얼음 시크바 -->
+                    <SeekBar
+                        android:id="@+id/custom_ice_seekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:progressTint="@color/Maincolor_Brown1" />
+
+                    <!-- 커스텀 메뉴 얼음 시크바 값 텍스트-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <!-- 얼음 시크바 값 텍스트1: 없음 -->
+                        <TextView
+                            android:id="@+id/explain_ice_no_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="없음"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <!-- 얼음 시크바 값 텍스트2: 적게 -->
+                        <TextView
+                            android:id="@+id/explain_ice_less_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:text="적게"
+                            android:textAlignment="center"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <!-- 얼음 시크바 값 텍스트3: 보통 -->
+                        <TextView
+                            android:id="@+id/explain_ice_normal_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:text="보통"
+                            android:textAlignment="center"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <!-- 얼음 시크바 값 텍스트4: 많이 -->
+                        <TextView
+                            android:id="@+id/explain_ice_much_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:text="많이"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/Active_Text"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- 커스텀 메뉴 토핑 제목 -->
+                    <TextView
+                        android:id="@+id/title_topping_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="토핑(최대 3가지 선택가능)"
+                        android:textColor="@color/Active_Text"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <!-- 커스텀 메뉴 토핑 설명 -->
+                    <TextView
+                        android:id="@+id/explain_topping_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="라지 500원 | 점보 700원"
+                        android:textColor="@color/Active_Text"
+                        android:textSize="13sp"
+                        android:textStyle="bold"/>
+
+                    <!-- 토핑 체크 박스1~3 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <!-- 토핑 체크 박스1 -->
+                        <CheckBox
+                            android:id="@+id/custom_topping1_radioButton"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:text="타피오카 펄"
+                            android:textColor="@color/Active_Text" />
+
+                        <!-- 토핑 체크 박스2 -->
+                        <CheckBox
+                            android:id="@+id/custom_topping2_radioButton"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="화이트 펄"
+                            android:textColor="@color/Active_Text" />
+
+                        <!-- 토핑 체크 박스3 -->
+                        <CheckBox
+                            android:id="@+id/custom_topping3_radioButton"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="알로에"
+                            android:textColor="@color/Active_Text" />
+
+                    </LinearLayout>
+
+                    <!-- 토핑 체크 박스4~6 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <!-- 토핑 체크 박스4 -->
+                        <CheckBox
+                            android:id="@+id/custom_topping4_radioButton"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:text="코코넛"
+                            android:textColor="@color/Active_Text" />
+
+                        <!-- 토핑 체크 박스5 -->
+                        <CheckBox
+                            android:id="@+id/custom_topping5_radioButton"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="밀크폼"
+                            android:textColor="@color/Active_Text" />
+
+                        <!-- 토핑 체크 박스6 -->
+                        <CheckBox
+                            android:id="@+id/custom_topping6_radioButton"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="치즈폼"
+                            android:textColor="@color/Active_Text" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <!-- 커스텀 메뉴 작성 완료 버튼 -->
+                <android.widget.Button
+                    android:id="@+id/login_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginBottom="100dp"
+                    android:background="@drawable/ic_add_complete_button_background"
+                    android:backgroundTint="@color/Maincolor_Brown2"
+                    android:fontFamily="sans-serif-black"
+                    android:text="커스텀 메뉴 작성 완료"
+                    android:textColor="@color/White_Text"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"/>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

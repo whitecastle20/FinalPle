@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EdiyaCustomMenuShowActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="16dp">
+
+                <!-- 커스텀 메뉴 작성 그룹 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <!-- 커스텀 메뉴 브랜드 제목 -->
+                    <TextView
+                        android:id="@+id/title_brand_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="커스텀 메뉴 브랜드"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- 브랜드 텍스트: 이디야 -->
+                    <TextView
+                        android:id="@+id/brand_name_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="이디야"
+                        android:textSize="20sp" />
+
+                    <!-- 커스텀 메뉴 대표 이미지 제목 -->
+                    <TextView
+                        android:id="@+id/title_image_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="커스텀 메뉴 대표 이미지"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- 대표 이미지 입력 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <!-- 대표 이미지 입력 버튼 -->
+                        <ImageButton
+                            android:id="@+id/custom_image_imageButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#00ff0000"
+                            app:srcCompat="@drawable/ic_add_image_icon"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <!-- 대표 이미지 설명 -->
+                        <TextView
+                            android:id="@+id/explain_image_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="커스텀 메뉴의 대표 이미지를 추가해주세요"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- 구분선1 이미지 -->
+                    <ImageView
+                        android:id="@+id/divid1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/ic_divide_line" />
+
+                    <!-- 공개 여부 제목 -->
+                    <TextView
+                        android:id="@+id/title_publicprivate_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="공개 여부"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- 공개/비공개 라디오 버튼 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <!-- 공개 라디오 버튼 -->
+                        <RadioButton
+                            android:id="@+id/custom_public_radioButton"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="공개"/>
+
+                        <!-- 비공개 라디오 버튼 -->
+                        <RadioButton
+                            android:id="@+id/custom_private_radioButton"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:text="비공개" />
+
+                    </LinearLayout>
+
+                    <!-- 커스텀 메뉴 이름 제목 -->
+                    <TextView
+                        android:id="@+id/title_name_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="커스텀 메뉴 이름"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- 커스텀 메뉴 이름 입력창 -->
+                    <TextView
+                        android:id="@+id/custom_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textSize="15sp"
+                        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+                    <!-- 커스텀 메뉴 기존 메뉴 제목 -->
+                    <TextView
+                        android:id="@+id/title_basemenu_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="기존 메뉴"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- 커스텀 메뉴 기존 메뉴 콤보박스(스피너) -->
+                    <TextView
+                        android:id="@+id/custom_basemenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <!-- 커스텀 메뉴 가격 제목 -->
+                    <TextView
+                        android:id="@+id/title_prise_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="커스텀 메뉴 가격"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- 커스텀 메뉴 가격 입력 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!-- 커스텀 메뉴 가격 입력창 -->
+                        <TextView
+                            android:id="@+id/custom_prise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:inputType="number"
+                            android:textAlignment="viewEnd"
+                            android:textSize="15sp" />
+
+                        <!-- 원표시 텍스트 -->
+                        <TextView
+                            android:id="@+id/explain_won_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="3dp"
+                            android:text="₩"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- 구분선2 이미지 -->
+                    <ImageView
+                        android:id="@+id/divid2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp" />
+
+                    <!-- 커스텀 메뉴 옵션 제목 -->
+                    <TextView
+                        android:id="@+id/title_option_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="커스텀 메뉴 옵션"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- 커스텀 메뉴 사이즈 제목 -->
+                    <TextView
+                        android:id="@+id/title_size_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="사이즈"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <!-- 사이즈 -->
+                        <TextView
+                            android:id="@+id/custom_size"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"/>
+                    </LinearLayout>
+
+                    <!-- 커스텀 메뉴 에스프레소 샷 갯수 제목 -->
+                    <TextView
+                        android:id="@+id/title_shotnum_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="에스프레소 샷 갯수 (500원 추가)"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <!-- 커스텀 메뉴 에스프레소 샷 갯수 증감 버튼 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+
+
+                        <!-- 커스텀 메뉴 에스프레소 샷 갯수 표시 텍스트 -->
+                        <TextView
+                            android:id="@+id/custom_shotnum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="15dp"
+                            android:text="0"
+                            android:textStyle="bold"/>
+
+
+                    </LinearLayout>
+
+                    <!-- 커스텀 메뉴 펄 토핑 제목 -->
+                    <TextView
+                        android:id="@+id/title_pearl_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="펄 토핑 (1000원 추가)"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <!-- 펄 토핑 체크버튼 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <!-- 커스텀 메뉴 펄 토핑 체크버튼1 -->
+                        <TextView
+                            android:id="@+id/custom_pearl1"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <!-- 커스텀 메뉴 시럽 제목 -->
+                    <TextView
+                        android:id="@+id/title_syrup_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="시럽 (1회당 300원 추가)"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <!-- 커스텀 메뉴 시럽: 헤이즐넛 시럽 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp">
+
+                        <!-- 헤이즐넛 시럽 제목 -->
+                        <TextView
+                            android:id="@+id/title_hazelnutsyrup_textView"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="헤이즐넛 시럽"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                        <!-- 헤이즐넛 시럽 갯수 표시 텍스트 -->
+                        <TextView
+                            android:id="@+id/custom_hazelnutsyrupnum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="15dp"
+                            android:text="0"
+                            android:textStyle="bold"/>
+
+
+
+                    </LinearLayout>
+
+                    <!-- 커스텀 메뉴 시럽: 카라멜 시럽 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp">
+
+                        <!-- 카라멜 시럽 제목 -->
+                        <TextView
+                            android:id="@+id/title_carameslyrup_textView"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="카라멜 시럽"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <!-- 카라멜 시럽 갯수 표시 텍스트 -->
+                        <TextView
+                            android:id="@+id/custom_caramelsyrupnum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="15dp"
+                            android:text="0"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <!-- 커스텀 메뉴 시럽: 바닐라 시럽 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp">
+
+                        <!-- 바닐라 시럽 제목 -->
+                        <TextView
+                            android:id="@+id/title_vanillasyrup_textView"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="바닐라 시럽"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                        <!-- 바닐라 시럽 갯수 표시 텍스트 -->
+                        <TextView
+                            android:id="@+id/custom_vanillasyrupnum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="15dp"
+                            android:text="0"
+                            android:textStyle="bold"/>
+
+
+
+                    </LinearLayout>
+
+                    <!-- 커스텀 메뉴 시럽: 아이리쉬 시럽 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp">
+
+                        <!-- 아이리쉬 시럽 제목 -->
+                        <TextView
+                            android:id="@+id/title_irishsyrup_textView"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="아이리쉬 시럽"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <!-- 아이리쉬 시럽 갯수 표시 텍스트 -->
+                        <TextView
+                            android:id="@+id/custom_irishsyrupnum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="15dp"
+                            android:text="0"
+                            android:textStyle="bold"/>
+
+
+                    </LinearLayout>
+
+                    <!-- 커스텀 메뉴 시럽: 카페 시럽(무료) -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp">
+
+                        <!-- 카페 시럽 제목 -->
+                        <TextView
+                            android:id="@+id/title_cafesyrup_textView"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="카페 시럽(무료)"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                        <!-- 카페 시럽 갯수 표시 텍스트 -->
+                        <TextView android:id="@+id/custom_cafesyrupnum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="15dp"
+                            android:text="0"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <!-- 커스텀 메뉴 토핑 소스 제목 -->
+                    <TextView
+                        android:id="@+id/title_toppingsauce_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="토핑 소스 (500원 추가)"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <!-- 토핑 소스 체크버튼 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <!-- 커스텀 메뉴 토핑 소스-->
+                        <TextView
+                            android:id="@+id/custom_toppingsauces"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content" />
+
+                        <!-- 커스텀 메뉴 토핑 소스 체크버튼1
+                         <TextView
+                             android:id="@+id/custom_toppingsauce1"
+                             android:layout_width="120dp"
+                             android:layout_height="wrap_content"
+                             android:text="초콜릿"/>
+                         -->
+                        <!-- 커스텀 메뉴 토핑 소스 체크버튼2
+
+                        <TextView
+                            android:id="@+id/custom_toppingsauce2"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="카라멜"/>
+                     -->
+
+                    </LinearLayout>
+
+                    <!-- 커스텀 메뉴 토핑제목 -->
+                    <TextView
+                        android:id="@+id/title_topping_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="토핑 (500원 추가)"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <!-- 토핑 체크버튼 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <!-- 커스텀 메뉴 토핑 -->
+                        <TextView
+                            android:id="@+id/custom_toppings"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content" />
+
+                        <!-- 커스텀 메뉴 토핑 체크버튼1
+                        <TextView
+                            android:id="@+id/custom_topping1"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="초코쿠키 크림"/>
+                        -->
+                        <!-- 커스텀 메뉴 토핑 체크버튼2
+                        <TextView
+                            android:id="@+id/custom_topping2"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="초콜릿칩"/>
+                        -->
+                        <!-- 커스텀 메뉴 토핑 체크버튼3
+                        <TextView
+                            android:id="@+id/custom_topping3"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="휘핑크림"/>
+                        -->
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!-- 커스텀 메뉴 작성 완료 버튼 -->
+                <android.widget.Button
+                    android:id="@+id/login_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginBottom="100dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="커스텀메뉴 리스트로 가기"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"/>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

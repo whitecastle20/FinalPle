@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Active_Text">#1C2943</color>
+    <color name="Inactive_Text">#B5B5B5</color>
+    <color name="White_Text">#FFFFFF</color>
+
+    <color name="Maincolor_Black">#090909</color>
+    <color name="Maincolor_DarkBlue">#1C2943</color>
+    <color name="Maincolor_White">#FFFFFF</color>
+
+    <color name="Maincolor_Brown1">#C99C79</color>
+    <color name="Maincolor_Brown2">#733D31</color>
+    <color name="Maincolor_Brown3">#593521</color>
+
+    <color name="Background_Ivory">#EDE5CF</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
