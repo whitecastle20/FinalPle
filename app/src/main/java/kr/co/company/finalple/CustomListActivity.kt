@@ -24,8 +24,8 @@ class CustomListActivity : AppCompatActivity() {
         dbManager = DBManager(this, "ediyaMenuDB", null, 1)
         sqlitedb = dbManager.readableDatabase
 
-        //layout= findViewById(R.id.customList)
-        layout= findViewById(R.id.customlist_card)
+        layout= findViewById(R.id.customList)
+        //layout= findViewById(R.id.customlist_card)
         var cursor : Cursor
         cursor = sqlitedb.rawQuery("SELECT * FROM ediyaMenuDB", null) // ediyaMenuDB의 모든 데이터
 
@@ -52,43 +52,43 @@ class CustomListActivity : AppCompatActivity() {
             layout_item.orientation = LinearLayout.VERTICAL
             layout_item.id = num    // 다른 레이아웃과 구분하기 위함(id: 0, 1, 2, ....)
 
-//
-//            // textView 속성 설정 - 커스텀 메뉴 명칭
-//            var tvCustomMenuName : TextView = TextView(this)
-//            tvCustomMenuName.text = str_customMenuName
-//            tvCustomMenuName.textSize = 30f
-//            //tvCustomMenuName.textStyle="bold"
-//            layout_item.addView(tvCustomMenuName)// 레이아웃에 추가
-//
-//            // textView 속성 설정 - 베이스(기존) 메뉴 명칭
-//            var tvExistingMenuName : TextView = TextView(this)
-//            tvExistingMenuName.text = str_existingMenuName
-//            tvExistingMenuName.textSize = 30f
-//            layout_item.addView(tvExistingMenuName)// 레이아웃에 추가
-//
-//            // textView 속성 설정 - 가격
-//            var tvPrice : TextView = TextView(this)
-//            tvPrice.text = str_price
-//            tvPrice.textSize = 30f
-//            layout_item.addView(tvPrice)// 레이아웃에 추가
 
-
-            //시도
             // textView 속성 설정 - 커스텀 메뉴 명칭
-            var list_item_name_textView : TextView
-            list_item_name_textView = findViewById(R.id.list_item_brand_textView)
-            list_item_name_textView.text = str_customMenuName
-            layout_item.addView(list_item_name_textView)// 레이아웃에 추가
+            var tvCustomMenuName : TextView = TextView(this)
+            tvCustomMenuName.text = str_customMenuName
+            tvCustomMenuName.textSize = 30f
+            //tvCustomMenuName.textStyle="bold"
+            layout_item.addView(tvCustomMenuName)// 레이아웃에 추가
+
             // textView 속성 설정 - 베이스(기존) 메뉴 명칭
-            var list_item_brand_textView : TextView
-            list_item_brand_textView = findViewById(R.id.list_item_brand_textView)
-            list_item_brand_textView.text = str_existingMenuName
-            layout_item.addView(list_item_brand_textView)// 레이아웃에 추가
+            var tvExistingMenuName : TextView = TextView(this)
+            tvExistingMenuName.text = str_existingMenuName
+            tvExistingMenuName.textSize = 30f
+            layout_item.addView(tvExistingMenuName)// 레이아웃에 추가
+
             // textView 속성 설정 - 가격
-            var list_item_prise_textView : TextView
-            list_item_prise_textView = findViewById(R.id.list_item_prise_textView)
-            list_item_prise_textView.text = str_price
-            layout_item.addView(list_item_prise_textView)// 레이아웃에 추가
+            var tvPrice : TextView = TextView(this)
+            tvPrice.text = str_price
+            tvPrice.textSize = 30f
+            layout_item.addView(tvPrice)// 레이아웃에 추가
+
+//
+//            //시도
+//            // textView 속성 설정 - 커스텀 메뉴 명칭
+//            var list_item_name_textView : TextView
+//            list_item_name_textView = findViewById(R.id.list_item_name_textView)
+//            list_item_name_textView.text = str_customMenuName
+//            layout_item.addView(list_item_name_textView)// 레 이아웃에 추가
+//            // textView 속성 설정 - 베이스(기존) 메뉴 명칭
+//            var list_item_brand_textView : TextView
+//            list_item_brand_textView = findViewById(R.id.list_item_brand_textView)
+//            list_item_brand_textView.text = str_existingMenuName
+//            layout_item.addView(list_item_brand_textView)// 레이아웃에 추가
+//            // textView 속성 설정 - 가격
+//            var list_item_prise_textView : TextView
+//            list_item_prise_textView = findViewById(R.id.list_item_prise_textView)
+//            list_item_prise_textView.text = str_price
+//            layout_item.addView(list_item_prise_textView)// 레이아웃에 추가
 
 
             // 레이아웃 클릭 시
